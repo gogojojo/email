@@ -1,1 +1,4 @@
-index.html.erb
+<%= form_for Employer.new() do |f| %>
+  <%= f.text_field :email %>
+  <%= f.submit 'enter'%>
+<% end %>
