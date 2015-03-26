@@ -1,6 +1,12 @@
-<h1> Hello! <h1>
+<% if flash[:notice] %>
+  <div class='flash'>
+    <p> <%= flash[:notice] %> <p>
+  </div>
+<% end %>
+<h1> Hello! </h1>
 <h2> Enter your email below to recieve my info! </h2>
 <%= form_for Employer.new() do |f| %>
-  <%= f.text_field :email %>
-  <%= f.submit 'enter'%>
+  <%= f.text_field :email , :class =>'text'%>
+  <br>
+  <%= f.submit 'enter', :class=> 'submit'%>
 <% end %>
