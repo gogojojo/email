@@ -7,6 +7,7 @@ class EmployersController < ApplicationController
       redirect_to '/' 
     else 
       flash[:notice] ="You didnt enter an email!"
+      redirect_to '/'
     end
   end
 end
